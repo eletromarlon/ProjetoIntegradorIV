@@ -1,7 +1,7 @@
 const express = require('express')
 
 const welcome = (req,res) => {
-    res.render('welcome')
+    res.render('index')
     //res.send('Tô aqui')
 }
 
@@ -10,7 +10,7 @@ const contact = (req, res) =>{
 }
 
 const dasboard = (req, res) =>{
-    res.render('index')
+    res.render('dashboard')
 }
 
 module.exports = {
