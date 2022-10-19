@@ -1,0 +1,68 @@
+:root{
+    --preto: #161616;
+    --branco: #FFFFFF;
+    --amarelo: #FAE212;
+    --vermelho: #DB2B2B;
+    --verde: #32FA12;
+    --preto-sobreposicao: #222222;
+}
+
+@font-face {
+    font-family: Bungee;
+    src: url('/assets/font/BungeeHairline-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Aldrich;
+    src: url('/assets/font/aldrich.regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+nav{
+    height: 85px;
+    font-family: 'Bungee';
+    font-size: 21.91px;
+    font-weight: bold;
+    line-height: 26.3px;
+    background-color: var(--preto);
+}
+
+nav .container-fluid{
+    padding-top: 31.49px;
+    padding-left: 32.53px;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-fluid img{
+    width: 33.39px;
+    height: 32.6px;
+}
+
+nav #relogio{
+    width: 160px;
+    margin-left: 400px;
+
+    font-family: 'Aldrich';
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+
+    
+}
+
+
