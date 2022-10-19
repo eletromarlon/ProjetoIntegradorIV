@@ -21,7 +21,7 @@ body{
     margin: 0;
     display: flex;
     color: var(--branco);
-    
+    box-sizing: border-box;
 }
 
 .lado-esq, .lad-dir, .textos{
@@ -50,11 +50,20 @@ body{
     color: var(--verde);
 }
 
+.btn{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 9px;
+    letter-spacing: 0.1em;
+    height: 35px;
+}
+
 .lado-esq .btn{
-    background-color: var(--branco);
-    color: var(--preto);
-    width: 6.181rem;
-    height: 32.96;
+    width: 7.181rem;
+    height: 30;
+    margin-left: 400px;
+    padding: 10px;
 }
 
 #logo{
@@ -92,13 +101,17 @@ body{
     text-align: justify;
 }
 
-.lad-dir{
-    position: relative;
+.lado-dir{
+    margin-left: 730px;
+    margin-top: 43.11px;
+    box-sizing: border-box;
 }
 
-.lad-dir .btn{
-    margin-top: 43.11px;
-    margin-right: 80px;
+.lado-dir .btn-dark{
+    width: 10.181rem;
+    height: 30;
+    margin-left: 400px;
+    padding: 10px;
 }
 
 
