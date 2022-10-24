@@ -3,6 +3,7 @@ setInterval(() => {
     getData()
 }, 100)
 
+/**Função para o relógio */
 function getTime(){
     const relogio = document.getElementById('relogio')
     const tempo = new Date() 
@@ -13,6 +14,7 @@ function getTime(){
     relogio.innerHTML = `${hora}:${min}${turno}`
 }
 
+/**Função para retornar a data atual */
 function getData(){
     const data_text = document.querySelectorAll('.data')
     const data = new Date()
@@ -25,13 +27,29 @@ function getData(){
     });
 }
 
+/** Função de abrir e fechar sidebar */
 function botaoSideBar(){
     let btn_svg = document.querySelector('.botao-svg')
     let sidebar = document.querySelector('.sidebar')
 
     sidebar.classList.toggle('active')
-    btn_svg.classList.toggle('active')
-    console.log(sidebar)
-    console.log(btn_svg)
+    btn_svg.classList.toggle('active')  
+}
+window.onload = () => {
+    for (let i = 0; i < 3; i++) {
+       mudaCor(0, i)      
+    }
+}
+
+function mudaCor(semaforo, cor){
+    const cores = ['##32FA12', '#FAE212', '#DB2B2B'] /**Verde, Amarelo, Vermelho */
+    const coresNome = ['Verde', 'Amarelo', 'Vermelho']
+
+    let circles = document.querySelectorAll('.status-light')
+    let spanTextos = document.querySelectorAll('.color')
+
+    circles[semaforo].style.backgroundColor = cores[cor]
+    spanTextos[semaforo].innerHTML = coresNome[cor]
     
+    console.log(circles[semaforo], spanTextos[semaforo])
 }
