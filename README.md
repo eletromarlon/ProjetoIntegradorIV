@@ -14,7 +14,7 @@
 - <a href='https://docs.google.com/spreadsheets/d/16uacRwn8fJHadwd4hxm_4cdNwlsLTsZc_4txhR0OtSE/edit?usp=sharing'>Plano de Teste
 
 ### Arquitetura do Sistema
-<td align="center"><img src="https://avatars.githubusercontent.com/u/60488949?v=4" width="100px;" alt=""/><br /><br />
+<p align="center"><img src=".github/Modelo Arquitetural.png" width="500px;" alt=""/><br /><br />
 
 ### Protótipos de Interface
 - <a href='https://www.figma.com/file/pH6HmZMhgP12Z005THy6zH/TRAFEGA---Dashboard?node-id=0%3A1'> Link para o Figma
