@@ -35,12 +35,15 @@ function botaoSideBar(){
     sidebar.classList.toggle('active')
     btn_svg.classList.toggle('active')  
 }
+
 window.onload = () => {
-    for (let i = 0; i < 3; i++) {
-       mudaCor(0, i)      
-    }
+    mudaCor(0, 1)
+    mudaCor(4, 2)
+    mudaCor(8, 2)
+    btnweek()
 }
 
+/**Função para alterar a cor do semáforo */
 function mudaCor(semaforo, cor){
     const cores = ['##32FA12', '#FAE212', '#DB2B2B'] /**Verde, Amarelo, Vermelho */
     const coresNome = ['Verde', 'Amarelo', 'Vermelho']
@@ -52,4 +55,29 @@ function mudaCor(semaforo, cor){
     spanTextos[semaforo].innerHTML = coresNome[cor]
     
     console.log(circles[semaforo], spanTextos[semaforo])
+}
+
+/**Função para ativar os botões referentes ao dia da semana */
+function btnweek(){
+    let botoes = document.querySelectorAll('.week-btn')
+
+    botoes.forEach(element => {
+        element.addEventListener('click', () => {
+            removeClasses(element, botoes)
+        })
+    });
+}
+
+/**Função para remover/adicionar classes aos botões */
+function removeClasses(botao, listaBotoes){
+    listaBotoes.forEach((btn) => {
+        /**Se o botão que estou percorrendo não for o botão clicado, então a classe 
+         * active não é adicionada. Caso contrário a classe active é adicionada ao mesmo.
+         */
+        if(btn == botao){
+            btn.classList.add('active')
+        } else {
+            btn.classList.remove('active')
+        }
+    })
 }

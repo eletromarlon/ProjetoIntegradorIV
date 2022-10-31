@@ -1,4 +1,5 @@
 :root{
+    --preto-preto: #000000;
     --preto: #161616;
     --branco: #FFFFFF;
     --amarelo: #FAE212;
@@ -249,5 +250,105 @@ nav #relogio{
     font-size: 10px;
     line-height: 10px;
     color: var(--cinza)
+}
+
+.datas{
+    /**background-color: #32FA12;*/
+    width: 1100px;
+    height: 550px;
+    box-sizing: border-box;
+    margin-left: 180px;
+    
+}
+
+.datas nav{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.cars-total{
+    width: 131px;
+    height: 41px;
+    margin: 5px 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Montserrat';
+}
+
+.cars-total span{
+    font-size: 12.49px;
+    font-weight: 500;
+    line-height: 12px;
+    color: var(--cinza);
+}
+
+.number-img{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 3px;
+}
+
+.number-img span{
+    font-size: 21.02px;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.week{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 3.18px;
+
+    position: absolute;
+    width: 314.5px;
+    height: 29.5px;
+    margin-left: 560px;
+    margin-top: 18px;
+}
+
+.week-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6.36727px 4.24484px;
+    gap: 5.31px;
+
+    width: 42.49px;
+    height: 25.73px;
+
+    background: var(--preto-preto);
+    border-radius: 2.65303px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.36727px;
+    line-height: 5px;
+    /* identical to box height, or 71% */
+
+
+    color: var(--branco);
+}
+
+.week-btn:hover{
+    cursor: pointer;
+}
+
+.week-btn.active{
+    background-color: var(--branco);
+    color: var(--preto);
 }
 
