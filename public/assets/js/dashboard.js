@@ -1,3 +1,12 @@
+window.onload = () => {
+    mudaCor(0, 1)
+    mudaCor(4, 2)
+    mudaCor(8, 2)
+    btnweek()
+    ativaPartsBtn()
+    alteraTotalDeCarros(9099)
+}
+
 setInterval(() => {
     getTime()
     getData()
@@ -36,13 +45,6 @@ function botaoSideBar(){
     btn_svg.classList.toggle('active')  
 }
 
-window.onload = () => {
-    mudaCor(0, 1)
-    mudaCor(4, 2)
-    mudaCor(8, 2)
-    btnweek()
-}
-
 /**Função para alterar a cor do semáforo */
 function mudaCor(semaforo, cor){
     const cores = ['##32FA12', '#FAE212', '#DB2B2B'] /**Verde, Amarelo, Vermelho */
@@ -79,5 +81,27 @@ function removeClasses(botao, listaBotoes){
         } else {
             btn.classList.remove('active')
         }
+    })
+}
+
+function alteraTotalDeCarros(qtd){
+    let totalDeCarros = document.getElementById('number-of-cars')
+    
+    if(qtd >= 0 && qtd <= 9) {totalDeCarros.innerHTML = `000.000.00${qtd}`}
+    else if(qtd >= 10 && qtd <= 99) {totalDeCarros.innerHTML = `000.000.0${qtd}`}
+    else if(qtd >= 100 && qtd <= 999) {totalDeCarros.innerHTML = `000.000.${qtd}`}
+    /**else if(qtd >= 1000 && qtd <= 9999) {totalDeCarros.innerHTML = `000.00${Math.trunc(qtd/1000)}.${qtd-Math.trunc(qtd/1000)*1000}`}*/
+}
+
+function ativaPartsBtn(){
+    let partsBtn = document.querySelectorAll('.parts-btn')
+
+    partsBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            partsBtn.forEach(element  => {
+                if(element == btn) {element.classList.add('active')}
+                else{element.classList.remove('active')}
+            })
+        })
     })
 }

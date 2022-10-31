@@ -352,3 +352,50 @@ nav #relogio{
     color: var(--preto);
 }
 
+.parts{
+    position: absolute;
+    width: 195.45px;
+    height: 48.24px;
+    margin-left: 931.37px;
+    margin-top: 8.48px;
+    padding: 8px 11px;
+
+    background: var(--preto-sobreposicao);
+    border-radius: 7.95908px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18.12px;
+    
+}
+
+.parts-btn{
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-style: normal;
+    font-size: 12.36727px;
+    line-height: 8px;
+    background-color: var(--preto-preto);
+    color: var(--branco);
+
+    width: 85px;
+    height: 32px;
+    border-radius: 7.95908px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5.30606px 4px; 
+}
+
+.parts-btn:hover{
+    cursor: pointer;
+}
+
+.parts-btn.active{
+    background-color: var(--branco);
+    color: var(--preto-preto);
+}
+
