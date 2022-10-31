@@ -9,10 +9,15 @@
 ![Série](https://img.shields.io/badge/Trafega-Projeto%20Integrador-yellow)
 [![licence mit](https://img.shields.io/badge/licence-MIT-orange.svg)]()
 
-### Links
-- Documento Inicial de Requisitos: (https://docs.google.com/document/d/1TvggKBhpuJN9PfHiFJHMyyQdFkuRHIfYR-_bColi2H4/edit?usp=sharing)
-- Projeto do Logotipo: (https://www.figma.com/file/KZbUTTWVfpIObz9vhybKxh/PI.-IV-(logo%3F)?node-id=14%3A2)
-- Projeto das Telas: (https://www.figma.com/file/pH6HmZMhgP12Z005THy6zH/TRAFEGA---Dashboard?node-id=0%3A1)
+### ~ Documentos do Projeto ~
+- <a href='https://docs.google.com/document/d/1k1IceFHvfnbBH1P478gfKFBrcCz9Od0_l4Kpyl5X03Q/edit?usp=sharing'>Documento de Requisitos do Sistema
+- <a href='https://docs.google.com/spreadsheets/d/16uacRwn8fJHadwd4hxm_4cdNwlsLTsZc_4txhR0OtSE/edit?usp=sharing'>Plano de Teste
+
+### ~ Arquitetura do Sistema ~
+<p align="center"><img src=".github/Modelo Arquitetural.png" width="500px;" alt=""/><br /><br />
+
+### ~ Protótipos de Interface ~
+- <a href='https://www.figma.com/file/pH6HmZMhgP12Z005THy6zH/TRAFEGA---Dashboard?node-id=0%3A1'> Link para o Figma
 
 ### Desenvolvedores
 <table>
