@@ -1,10 +1,11 @@
+
 window.onload = () => {
     mudaCor(0, 1)
     mudaCor(4, 2)
     mudaCor(8, 2)
     btnweek()
     ativaPartsBtn()
-    alteraTotalDeCarros(9099)
+    alteraTotalDeCarros(9199)
 }
 
 setInterval(() => {
@@ -90,7 +91,8 @@ function alteraTotalDeCarros(qtd){
     if(qtd >= 0 && qtd <= 9) {totalDeCarros.innerHTML = `000.000.00${qtd}`}
     else if(qtd >= 10 && qtd <= 99) {totalDeCarros.innerHTML = `000.000.0${qtd}`}
     else if(qtd >= 100 && qtd <= 999) {totalDeCarros.innerHTML = `000.000.${qtd}`}
-    /**else if(qtd >= 1000 && qtd <= 9999) {totalDeCarros.innerHTML = `000.00${Math.trunc(qtd/1000)}.${qtd-Math.trunc(qtd/1000)*1000}`}*/
+    else if(qtd >= 1000 && qtd <= 9999) {totalDeCarros.innerHTML = `000.00${Math.trunc(qtd/1000)}.${qtd-Math.trunc(qtd/1000)*1000}`}
+    /** Falta concluir*/ 
 }
 
 function ativaPartsBtn(){
@@ -105,3 +107,4 @@ function ativaPartsBtn(){
         })
     })
 }
+

@@ -2,7 +2,6 @@ const express = require('express')
 const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 const router = require('./routes/routes')
-const Chart = require('chart.js');
 
 const app = express()
 
