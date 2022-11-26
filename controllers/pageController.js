@@ -1,8 +1,5 @@
-const express = require('express')
-
 const welcome = (req,res) => {
     res.render('index')
-    //res.send('Tô aqui')
 }
 
 const contact = (req, res) =>{

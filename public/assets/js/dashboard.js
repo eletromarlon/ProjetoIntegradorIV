@@ -1,11 +1,38 @@
 
 window.onload = () => {
-    mudaCor(0, 1)
-    mudaCor(4, 2)
-    mudaCor(8, 2)
+    let socket = io();
+
+    socket.on("hello", (dados, callback) => {
+        let arrayCoresSemaforos = [
+            dados.Cruzamento1.Semaforo1.cor, dados.Cruzamento1.Semaforo2.cor,
+            dados.Cruzamento1.Semaforo3.cor, dados.Cruzamento1.Semaforo4.cor,
+            dados.Cruzamento2.Semaforo5.cor, dados.Cruzamento2.Semaforo6.cor,
+            dados.Cruzamento2.Semaforo7.cor, dados.Cruzamento2.Semaforo8.cor,
+            dados.Cruzamento3.Semaforo9.cor, dados.Cruzamento3.Semaforo10.cor,
+            dados.Cruzamento3.Semaforo11.cor, dados.Cruzamento3.Semaforo12.cor,
+        ]
+
+        let arrayTemposDeAbertura = [
+            dados.Cruzamento1.Semaforo1.tempoDeAbertura, dados.Cruzamento1.Semaforo2.tempoDeAbertura,
+            dados.Cruzamento1.Semaforo3.tempoDeAbertura, dados.Cruzamento1.Semaforo4.tempoDeAbertura,
+            dados.Cruzamento2.Semaforo5.tempoDeAbertura, dados.Cruzamento2.Semaforo6.tempoDeAbertura,
+            dados.Cruzamento2.Semaforo7.tempoDeAbertura, dados.Cruzamento2.Semaforo8.tempoDeAbertura,
+            dados.Cruzamento3.Semaforo9.tempoDeAbertura, dados.Cruzamento3.Semaforo10.tempoDeAbertura,
+            dados.Cruzamento3.Semaforo11.tempoDeAbertura, dados.Cruzamento3.Semaforo12.tempoDeAbertura,
+        ]
+
+        alterarCorSemaforos(arrayCoresSemaforos)
+        callback("got it");
+    });
+    
+    
     btnweek()
     ativaPartsBtn()
     alteraTotalDeCarros(9199)
+    speedCanvas()
+    canvaAmount()
+    alteraTempo(0, 1)
+    
 }
 
 setInterval(() => {
@@ -23,6 +50,12 @@ function getTime(){
 
     relogio.innerHTML = `${hora}:${min}${turno}`
 }
+
+
+/**
+ * ---------------------------------------------------------------
+ * Funções sidebar
+ */
 
 /**Função para retornar a data atual */
 function getData(){
@@ -55,10 +88,57 @@ function mudaCor(semaforo, cor){
     let spanTextos = document.querySelectorAll('.color')
 
     circles[semaforo].style.backgroundColor = cores[cor]
-    spanTextos[semaforo].innerHTML = coresNome[cor]
-    
-    console.log(circles[semaforo], spanTextos[semaforo])
+    spanTextos[semaforo].innerHTML = coresNome[cor]    
 }
+
+/**Função para alterar a cor de todos os semáforos juntos */
+function alterarCorSemaforos(semaforosCores){
+    mudaCor(0, semaforosCores[0])
+    mudaCor(1, semaforosCores[1])
+    mudaCor(2, semaforosCores[2])
+    mudaCor(3, semaforosCores[3])
+    mudaCor(4, semaforosCores[4])
+    mudaCor(5, semaforosCores[5])
+    mudaCor(6, semaforosCores[6])
+    mudaCor(7, semaforosCores[7])
+    mudaCor(8, semaforosCores[8])
+    mudaCor(9, semaforosCores[9])
+    mudaCor(10,semaforosCores[10])
+    mudaCor(11,semaforosCores[11])
+}
+
+/**Função para alterar o tempo de abertura do semáforo */
+function alteraTempo(semaforo, tempo){
+    let listaSemaforos = document.querySelectorAll('.time-opened')
+    
+    if(tempo >= 0 && tempo <= 9){
+        listaSemaforos[semaforo].innerHTML = "0" + tempo + " SEG"
+    } else{
+        listaSemaforos[semaforo].innerHTML = tempo + " SEG"
+    }
+}
+
+/**Função para alterar o tempo de todos os semáforos */
+function alterarTempoSemaforos(tempos){
+    alteraTempo(0, tempos[0])
+    alteraTempo(1, tempos[1])
+    alteraTempo(2, tempos[2])
+    alteraTempo(3, tempos[3])
+    alteraTempo(4, tempos[4])
+    alteraTempo(5, tempos[5])
+    alteraTempo(6, tempos[6])
+    alteraTempo(7, tempos[7])
+    alteraTempo(8, tempos[8])
+    alteraTempo(9, tempos[9])
+    alteraTempo(10,tempos[10])
+    alteraTempo(11,tempos[11])
+}
+
+
+/**
+ * ---------------------------------------------------------------
+ * 
+ */
 
 /**Função para ativar os botões referentes ao dia da semana */
 function btnweek(){
@@ -92,7 +172,6 @@ function alteraTotalDeCarros(qtd){
     else if(qtd >= 10 && qtd <= 99) {totalDeCarros.innerHTML = `000.000.0${qtd}`}
     else if(qtd >= 100 && qtd <= 999) {totalDeCarros.innerHTML = `000.000.${qtd}`}
     else if(qtd >= 1000 && qtd <= 9999) {totalDeCarros.innerHTML = `000.00${Math.trunc(qtd/1000)}.${qtd-Math.trunc(qtd/1000)*1000}`}
-    /** Falta concluir*/ 
 }
 
 function ativaPartsBtn(){
@@ -106,5 +185,94 @@ function ativaPartsBtn(){
             })
         })
     })
+}
+
+function speedCanvas(){
+    const ctx = document.getElementById('canvaSpeed').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['0M', '10M', '20M', '30M', '40M', '50M', '60M'],
+            datasets: [{
+                data: [
+                    {x: '0M', y: '10'}, 
+                    {x: '10M', y: '25'},
+                    {x: '20M', y: '25'},
+                    {x: '30M', y: '40'},
+                    {x: '40M', y: '3'},
+                    {x: '50M', y: '60'},
+                    {x: '60M', y: '50'},
+                ],
+                backgroundColor: [
+                    'hsl(112, 96%, 53%)',
+                    
+                ],
+                borderColor: [
+                    'hsl(112, 96%, 53%)',
+                ],
+                borderWidth: 1,
+                cubicInterpolationMode: 'monotone'
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+            
+        }
+    });
+
+}
+
+function canvaAmount(){
+    const ctx = document.getElementById('canvaAmount').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['10M', '20M', '30M', '40M', '50M', '60M'],
+            datasets: [{
+                data: [
+                    {x: '10M', y: '10'}, 
+                    {x: '20M', y: '25'},
+                    {x: '30M', y: '125'}
+                ],
+                backgroundColor: [
+                    '#FFE605',
+                    
+                ],
+                borderColor: [
+                    '#FFE605',
+                ],
+                borderWidth: 1,
+                borderRadius: 30,
+                barThickness: 15,
+                borderSkipped: 'middle', 
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                },
+                x: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+
+        }
+    });
+
 }
 
