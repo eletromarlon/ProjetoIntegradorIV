@@ -33,6 +33,8 @@ que o constituem interconectados, e das principais tecnologias usadas na sua imp
 Esse diagrama apresenta um módulo da aplicação que será utilizado para a visualização dos dados em
 um Dashboard com gráficos e identificadores de estados, cuja arquitetura é apresentada logo abaixo:
 
+<p align="center"><img src=".github/MVC_Arquitetura.png" width="1000px;" alt=""/><br /><br />
+
 ### ~ Protótipos de Interface ~
 - <a href='https://www.figma.com/file/pH6HmZMhgP12Z005THy6zH/TRAFEGA---Dashboard?node-id=0%3A1'> Link para o Figma
 
