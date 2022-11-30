@@ -28,7 +28,7 @@ ocorressem.
 Primeiro, apresentamos um diagrama em alto nível da arquitetura do sistema como um todo, todos os módulos 
 que o constituem interconectados, e das principais tecnologias usadas na sua implementação:
 
-<p align="center"><img src=".github/Modelo Arquitetural.png" width="300px;" alt=""/><br /><br />
+<p align="center"><img src=".github/Modelo Arquitetural.png" width="400px;" alt=""/><br /><br />
 
 Esse diagrama apresenta um módulo da aplicação que será utilizado para a visualização dos dados em
 um Dashboard com gráficos e identificadores de estados, cuja arquitetura é apresentada logo abaixo:
