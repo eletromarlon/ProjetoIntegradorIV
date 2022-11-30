@@ -36,7 +36,7 @@ um Dashboard com gráficos e identificadores de estados, cuja arquitetura é apr
 <p align="center"><img src=".github/MVC_Arquitetura.png" width="1000px;" alt=""/><br /><br />
 
 Essa arquitetura é similar a uma <a href='https://pt.wikipedia.org/wiki/MVC'>Arquitetura MVC</a>, conforme estudamos no <a href='https://engsoftmoderna.info/cap7.html'> Capítulo 7 </a> do livro. No Front-End, a arquitetura possui três componentes principais,
-e cada um deles permitie a execução da visualização dos dados da aplicação:
+e cada um deles permite a execução da visualização dos dados da aplicação:
 - Controladores;
 - Views;
 - Arduíno;
