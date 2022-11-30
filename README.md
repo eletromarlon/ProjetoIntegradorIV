@@ -35,11 +35,17 @@ um Dashboard com gráficos e identificadores de estados, cuja arquitetura é apr
 
 <p align="center"><img src=".github/MVC_Arquitetura.png" width="1000px;" alt=""/><br /><br />
 
+Essa arquitetura é similar a uma <a href='https://pt.wikipedia.org/wiki/MVC'>Arquitetura MVC</a>, conforme estudamos no <a href='https://engsoftmoderna.info/cap7.html'> Capítulo 7 </a> do livro. No Front-End, a arquitetura possui três componentes principais,
+e cada um deles permitie a execução da visualização dos dados da aplicação:
+- Controladores;
+- Views;
+- Arduíno;
+
 ### ~ Protótipos de Interface ~
 - <a href='https://www.figma.com/file/pH6HmZMhgP12Z005THy6zH/TRAFEGA---Dashboard?node-id=0%3A1'> Link para o Figma
 
 ### Desenvolvedores
-<table>
+<table align="center">
 <tr>
     <td align="center"><a href="https://github.com/eletromarlon"><img src="https://avatars.githubusercontent.com/u/60488949?v=4" width="100px;" alt=""/><br /><sub><b>Marlon Duarte</b></sub></a><br /><p title="Front-End">💻</p></td>
     <td align="center"><a href="https://github.com/gabrielrudan"><img src="https://avatars.githubusercontent.com/u/84931636?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Rudan</b></sub></a><br /><p title="Front-End">💻</p></td>
