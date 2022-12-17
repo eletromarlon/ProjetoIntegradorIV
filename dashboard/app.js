@@ -25,6 +25,7 @@ app.use(router.routes)
 
 io.on('connection', (socket) => {
     let msg =  {
+        'TotalDeVeiculos': 100,
         'Cruzamento1': {
             'Semaforo1':{
                 'cor': 0,
@@ -64,15 +65,19 @@ io.on('connection', (socket) => {
         'Cruzamento3': {
             'Semaforo9':{
                 'cor': 0,
+                'tempoDeAbertura': 10
             },
             'Semaforo10':{
                 'cor': 2,
+                'tempoDeAbertura': 10
             },
             'Semaforo11':{
                 'cor': 2,
+                'tempoDeAbertura': 10
             },
             'Semaforo12':{
                 'cor': 2,
+                'tempoDeAbertura': 10
             },
         },
         

@@ -22,13 +22,15 @@ window.onload = () => {
         ]
 
         alterarCorSemaforos(arrayCoresSemaforos)
+        alterarTempoSemaforos(arrayTemposDeAbertura)
+        alteraTotalDeCarros(dados.TotalDeVeiculos)
         callback("got it");
+
     });
     
     
     btnweek()
     ativaPartsBtn()
-    alteraTotalDeCarros(9199)
     speedCanvas()
     canvaAmount()
     alteraTempo(0, 1)
